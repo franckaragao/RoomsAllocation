@@ -2,14 +2,14 @@
 public interface IFacadeRoomsAllocation {
 
 	/**
-	 * Apaga todos os dados do sistema.
+	 * Apaga todos os dados do sistema.te
 	 */
 	public void zerarSistema();
 
 	/**
-	 * Adiciona uma sala ao sistema. O usuário pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade física. Cada sala possui uma
-	 * identificação única: abreviação do prédio seguido de um número (Exemplo:
+	 * Adiciona uma sala ao sistema. O usuÃ¡rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade fÃ­sica. Cada sala possui uma
+	 * identificaÃ§Ã£o Ãºnica: abreviaÃ§Ã£o do prÃ©dio seguido de um nÃºmero (Exemplo:
 	 * CN-216).
 	 *
 	 * @param id
@@ -28,10 +28,10 @@ public interface IFacadeRoomsAllocation {
 
 	/**
 	 * 
-	 * Adiciona uma sala ao sistema. O usuário pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade física. Cada sala possui uma
-	 * identificação única: abreviação do prédio seguido de um número (Exemplo:
-	 * CN-216). Algumas salas possuem apelidos (Exemplo: Auditório Mário
+	 * Adiciona uma sala ao sistema. O usuÃ¡rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade fÃ­sica. Cada sala possui uma
+	 * identificaÃ§Ã£o Ãºnica: abreviaÃ§Ã£o do prÃ©dio seguido de um nÃºmero (Exemplo:
+	 * CN-216). Algumas salas possuem apelidos (Exemplo: AuditÃ³rio MÃ¡rio
 	 * Toyotaro).
 	 * 
 	 * @param id
@@ -50,10 +50,10 @@ public interface IFacadeRoomsAllocation {
 			String tipo, String apelido) throws RoomsAllocationException;
 
 	/**
-	 * Adiciona uma sala ao sistema. O usuário pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade física. Cada sala possui uma
-	 * identificação única: abreviação do prédio seguido de um número (Exemplo:
-	 * CN-216). Algumas salas possuem apelidos (Exemplo: Auditório Mário
+	 * Adiciona uma sala ao sistema. O usuÃ¡rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade fÃ­sica. Cada sala possui uma
+	 * identificaÃ§Ã£o Ãºnica: abreviaÃ§Ã£o do prÃ©dio seguido de um nÃºmero (Exemplo:
+	 * CN-216). Algumas salas possuem apelidos (Exemplo: AuditÃ³rio MÃ¡rio
 	 * Toyotaro).
 	 *
 	 * @param id
@@ -90,8 +90,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usuário pode adicionar eventos ao sistema. Cada evento possui um nome,
-	 * datas de inicio e fim, um nome para contato e um numero de repetiçoes
+	 * O usuÃ¡rio pode adicionar eventos ao sistema. Cada evento possui um nome,
+	 * datas de inicio e fim, um nome para contato e um numero de repetiÃ§oes
 	 * semanais
 	 * 
 	 * @param id
@@ -115,7 +115,7 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usuário pode adicionar eventos ao sistema. Cada evento possui um nome,
+	 * O usuÃ¡rio pode adicionar eventos ao sistema. Cada evento possui um nome,
 	 * datas de inicio e fim e um nome para contato.
 	 * 
 	 * @param id
@@ -153,8 +153,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * Deve-se alocar uma sala para um evento (repetitivo ou não). O sistema
-	 * deve informar as salas disponíveis que satisfaçam as restrições do
+	 * Deve-se alocar uma sala para um evento (repetitivo ou nÃ£o). O sistema
+	 * deve informar as salas disponÃ­veis que satisfaÃ§am as restriÃ§Ãµes do
 	 * evento.
 	 * 
 	 * @param idEvento
@@ -167,7 +167,7 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usuário pode localizar um evento escalonado através do nome, contato,
+	 * O usuÃ¡rio pode localizar um evento escalonado atravÃ©s do nome, contato,
 	 * data etc.
 	 * 
 	 * @param atributo
@@ -193,8 +193,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usuário pode cancelar um evento. Neste caso, o cancelamento remove o
-	 * evento da base de dados e desvincula as possíveis alocações previamente
+	 * O usuÃ¡rio pode cancelar um evento. Neste caso, o cancelamento remove o
+	 * evento da base de dados e desvincula as possÃ­veis alocaÃ§Ãµes previamente
 	 * computadas.
 	 * 
 	 * @param idEvento
@@ -204,8 +204,8 @@ public interface IFacadeRoomsAllocation {
 	public void cancelarEvento(String idEvento) throws RoomsAllocationException;
 
 	/**
-	 * O usuário pode remover salas do sistema. A remoçao de uma sala também
-	 * remove as possíveis alocações que referem a mesma, mas não exclui os
+	 * O usuÃ¡rio pode remover salas do sistema. A remoÃ§ao de uma sala tambÃ©m
+	 * remove as possÃ­veis alocaÃ§Ãµes que referem a mesma, mas nÃ£o exclui os
 	 * respectivos eventos da base de dados.
 	 * 
 	 * @param idSala
