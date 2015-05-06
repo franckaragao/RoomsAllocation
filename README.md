@@ -22,7 +22,7 @@ Possiveis duvidas
 
 <b>Linha 98:</b> O método localizarEvento vai buscar todos os eventos alocados, sendo assim, quando for inserido "Disciplina" deverá ser retornado todos os eventos que apresentem "Disciplina" no seu nome[Formato: SA-01:EV-01, SA-02:EV-05].
 
-<b>Linha 100 e 101:</b>
+<b>Linha 100 e 101:</b> Ao buscar um contanto pelo "localizarEvento", deve ser retornado todos os eventos que contenham o nome inserido. (Exemplo: Prof Pedro e Pedro Silva contém Pedro) [Formato:LAB-03:EV-09, SA-01:EV-01]
 * <b>Script 5</b>
 
 * <b>Script 6</b>
