@@ -1,0 +1,85 @@
+# User Story 2 - Criacao de eventos
+# Obs.: usar codificacao de caracteres ISO 8859
+
+# Os eventos podem ser repetitivos ou nao. Para eventos repetitivos o atributo repeticoes (Numero de repeticoes) e SEMPRE maior que zero. O Numero de 
+# repeticoes se refere as repeticoes semanais do evento. Sendo assim, a instrucao
+#
+#	adicionarEvento id=EV-01 nome="Disciplina 1" inicio="01/01/2011 13:00" fim="01/01/2011 14:00" repeticoes=3
+#
+# deve criar um evento com o id e nome especificados que ocorre às 13h do dia primeiro de janeiro ate as 14h do mesmo dia. Este mesmo evento ocorre nas 
+# proximas 3 semanas seguintes (dias 8, 15 e 22 de janeiro) no mesmo horario.
+#
+# Em eventos nao repetitivos, o atributo repeticoes e zero ou nao e passado na instrucao.
+#
+#
+
+zerarSistema
+
+# Eventos
+
+adicionarEvento id=EV-01 nome="Disciplina Sistema de Informacao I" inicio="03/03/2012 14:00" fim="03/03/2012 16:00" area="computacao" contato="Prof. Hyggo" repeticoes=11
+
+adicionarEvento id=EV-02 nome="Disciplina Programacao II" inicio="05/03/2012 14:00" fim="05/03/2012 16:00" area="computacao" contato="Prof. Hyggo" repeticoes=11
+
+adicionarEvento id=EV-03 nome="WDCOPIN 2012" inicio="06/03/2012 14:00" fim="06/03/2012 20:00" area="computacao" contato="Prof. Joao" repeticoes=0 
+
+adicionarEvento id=EV-04 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="quimica" contato="Prof. Jose"
+
+adicionarEvento id=EV-05 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="fisica" contato="Profa. Maria"
+
+adicionarEvento id=EV-06 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="biologia" contato="Profa. Lourdes"
+
+
+# Verificacao de atributos
+
+expect "Disciplina Sistema de Informacao I" getAtributoEvento id=EV-01 atributo="nome"
+
+expect "05/03/2012 14:00" getAtributoEvento id=EV-02 atributo="inicio"
+
+expect "06/03/2012 20:00" getAtributoEvento id=EV-03 atributo="fim"
+
+expect "computacao" getAtributoEvento id=EV-03 atributo="area"
+
+expect "biologia" getAtributoEvento id=EV-06 atributo="area"
+
+expect 0 getAtributoEvento id=EV-03 atributo="repeticoes"
+ 
+expect 0 getAtributoEvento id=EV-04 atributo="repeticoes"
+
+expect 11 getAtributoEvento id=EV-01 atributo="repeticoes"
+
+expectError "Evento nao existe." getAtributoEvento id= atributo="repeticoes"
+
+expectError "Atributo nao existe." getAtributoEvento id=EV-01 atributo="horario"
+
+expectError "Atributo nao existe." getAtributoEvento id=EV-01 atributo=""
+
+
+# Entradas invalidas
+
+expectError "Identificacao Invalida" adicionarEvento id= nome="Disciplina" inicio="03/03/2012 14:00" fim="03/03/2012 16:00" area="computacao" contato="Prof. Hyggo" repeticoes=11 
+
+expectError "Identificacao Invalida" adicionarEvento id= nome="Disciplina" inicio="03/03/2012 14:00" fim="03/03/2012 16:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Ja existe evento com esta identificacao." adicionarEvento id=EV-04 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Intervalo de datas invalido." adicionarEvento id=EV-10 nome="Disciplina" inicio="03/03/2012 14:00" fim="03/03/2012 10:00" area="computacao" contato="Prof. Hyggo"
+
+# As datas devem referenciar o mesmo dia.
+expectError "Intervalo de datas invalido." adicionarEvento id=EV-10 nome="Disciplina" inicio="03/03/2012 14:00" fim="04/03/2012 10:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Intervalo de datas invalido." adicionarEvento id=EV-10 nome="Disciplina" inicio="" fim="03/03/2012 10:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Intervalo de datas invalido." adicionarEvento id=EV-10 nome="Disciplina" inicio="03/03/2012 14:00" fim="" area="computacao" contato="Prof. Hyggo"
+
+expectError "Intervalo de datas invalido." adicionarEvento id=EV-10 nome="Disciplina" inicio="30/02/2012 14:00" fim="30/02/2012 16:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Atributo invalido." adicionarEvento id=EV-10 nome= inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="computacao" contato="Prof. Hyggo"
+
+expectError "Atributo invalido." adicionarEvento id=EV-10 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="computacao" contato="Prof. Hyggo" repeticoes="-1" 
+
+expectError "Atributo invalido." adicionarEvento id=EV-10 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="" contato="Prof. Hyggo" repeticoes="0" 
+
+expectError "Atributo invalido." adicionarEvento id=EV-10 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 12:00" area="computacao" contato="" repeticoes="0" 
+
+

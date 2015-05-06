@@ -1,0 +1,103 @@
+# User Story 1 - Criacao de salas
+# Obs.: usar codificacao de caracteres ISO 8859
+
+zerarSistema
+
+# Salas de aula
+
+adicionarSala id=SA-01 capacidade=30 finalidade="Sala de Aula" tipo="Normal"
+
+adicionarSala id=SA-02 capacidade=10 finalidade="Sala de Aula" tipo="Normal" apelido="salinha" 
+
+adicionarSala id=SA-03 capacidade=20 finalidade="Sala de Aula" tipo="Normal"
+
+adicionarSala id=SA-04 capacidade=15 finalidade="Sala de Aula" tipo="Inteligente"
+
+adicionarSala id=SA-05 capacidade=15 finalidade="Sala de Aula" tipo="Inteligente" apelido="Masmorra" 
+
+adicionarSala id=SA-06 capacidade=25 finalidade="Sala de Aula" tipo="Inteligente"
+
+adicionarSala id=SA-07 capacidade=20 finalidade="Sala de Aula" tipo="Videoconferencia"
+
+
+
+# Laboratorios
+
+adicionarSala id=LAB-01 capacidade=25 finalidade="Laboratorio" tipo="quimica"
+
+adicionarSala id=LAB-02 capacidade=25 finalidade="Laboratorio" tipo="fisica" apelido="Laboratorio de Computacao Pervasiva" 
+
+adicionarSala id=LAB-04 capacidade=25 finalidade="Laboratorio" tipo="biologia" apelido="Laboratorio de Visao Computacional" 
+
+adicionarSala id=LAB-05 capacidade=25 finalidade="Laboratorio" tipo="computacao" apelido="Laboratorio da pos graduacao" aberto=sim
+
+adicionarSala id=LAB-06 capacidade=25 finalidade="Laboratorio" tipo="computacao" apelido="Laboratorio de alunos" aberto=nao
+
+
+
+# Escritorios
+
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+
+adicionarSala id=ESC-02 capacidade=5 finalidade="Escritorio" apelido="Coordenacao"
+
+adicionarSala id=ESC-03 capacidade=3 finalidade="Escritorio" apelido="Laboratorio de Visao Computacional"
+
+
+
+# Salas de Conferência
+
+adicionarSala id=SC-01 capacidade=30 finalidade="Sala de Conferencia" tipo="Normal"
+
+adicionarSala id=SC-02 capacidade=10 finalidade="Sala de Conferencia" tipo="Videoconferencia" apelido="Auditorio Mario Toyotaro Hattori" 
+
+adicionarSala id=SC-03 capacidade=20 finalidade="Sala de Conferencia" tipo="Normal"
+
+
+
+# Verificacao de atributos
+
+expect "Sala de Aula" getAtributoSala id=SA-01 atributo="finalidade"
+
+expect "Laboratorio" getAtributoSala id=LAB-02 atributo="finalidade"
+
+expect 3 getAtributoSala id=ESC-03 atributo="capacidade"
+
+expect "" getAtributoSala id=SC-03 atributo="apelido"
+ 
+expect "Videoconferencia" getAtributoSala id=SA-07 atributo="tipo"
+
+
+
+# Entradas validas
+
+adicionarSala id=ESC-21 capacidade=30 finalidade="Sala de Aula" tipo="Normal"
+
+expect "Sala de Aula" getAtributoSala id=ESC-21 atributo="finalidade"
+
+adicionarSala id=SA-21 capacidade=25 finalidade="Laboratorio" tipo="Quimica"
+
+expect "Quimica" getAtributoSala id=SA-21 atributo="tipo"
+
+
+
+# Entradas invalidas
+
+expectError "Identificacao Invalida" adicionarSala id= capacidade=30 finalidade="Sala de Aula" tipo="Normal"
+
+expectError "Identificacao Invalida" adicionarSala id="" capacidade=30 finalidade="Sala de Aula" tipo="Normal"
+
+expectError "Ja existe sala com esta identificacao." adicionarSala id=SA-01 capacidade=15 finalidade="Sala de Aula" tipo="Inteligente" apelido="salinha" 
+
+expectError "Tipo invalido." adicionarSala id=SA-10 capacidade=30 finalidade="Sala de Aula" tipo="Biologia"
+
+expectError "Tipo invalido." adicionarSala id=LAB-10 capacidade=25 finalidade="Laboratorio" tipo="Normal"
+
+expectError "Tipo invalido." adicionarSala id=SC-10 capacidade=20 finalidade="Sala de Conferencia" tipo=
+
+expectError "Atributo invalido" getAtributoSala id=ESC-01 atributo="tipo"
+
+expectError "Sala não existe." getAtributoSala id=ASDDF atributo="tipo"
+
+
+

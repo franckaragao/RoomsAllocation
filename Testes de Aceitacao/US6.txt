@@ -1,0 +1,122 @@
+# User Story 6 - Cancelar eventos
+# Obs.: usar codificacao de caracteres ISO 8859
+
+
+zerarSistema
+
+######### Salas ##########
+
+# Salas de aula
+
+adicionarSala id=SA-01 capacidade=30 finalidade="Sala de Aula" tipo="Normal"
+
+adicionarSala id=SA-02 capacidade=15 finalidade="Sala de Aula" tipo="Inteligente" apelido="Masmorra"
+
+adicionarSala id=SA-03 capacidade=15 finalidade="Sala de Aula" tipo="Inteligente" apelido="salinha"
+
+adicionarSala id=SA-04 capacidade=20 finalidade="Sala de Aula" tipo="Videoconferencia"
+
+# Laboratorios
+
+adicionarSala id=LAB-01 capacidade=25 finalidade="Laboratorio" tipo="quimica"
+
+adicionarSala id=LAB-02 capacidade=25 finalidade="Laboratorio" tipo="computacao" apelido="Laboratorio da pos graduacao" aberto=sim
+
+adicionarSala id=LAB-03 capacidade=25 finalidade="Laboratorio" tipo="computacao" apelido="Laboratorio de alunos" aberto=nao
+
+adicionarSala id=LAB-04 capacidade=25 finalidade="Laboratorio" tipo="fisica" apelido="Laboratorio de Computacao Pervasiva"
+
+adicionarSala id=LAB-05 capacidade=25 finalidade="Laboratorio" tipo="biologia" apelido="Laboratorio de Visao Computacional"
+
+# Escritorios
+
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+
+# Salas de Conferencia
+
+adicionarSala id=SC-01 capacidade=30 finalidade="Sala de Conferencia" tipo="Normal"
+
+adicionarSala id=SC-02 capacidade=10 finalidade="Sala de Conferencia" tipo="Videoconferencia" apelido="Auditorio Mario Toyotaro Hattori"
+
+
+######### Eventos ##########
+
+adicionarEvento id=EV-01 nome="Disciplina Sistema de Informacao I" inicio="03/03/2012 14:00" fim="03/03/2012 15:59" area="computacao" contato="Prof. Hyggo" repeticoes=11
+
+adicionarEvento id=EV-05 nome="Trabalho da Disciplina Inteligencia Artificial" inicio="05/03/2012 14:00" fim="05/03/2012 16:00" area="biologia" contato="Profa. Maria"
+
+adicionarEvento id=EV-06 nome="Reuniao dos professores" inicio="05/03/2012 11:00" fim="05/03/2012 12:00" area="computacao" contato="Profa. Lourdes"
+
+adicionarEvento id=EV-07 nome="WDCOPIN 2012" inicio="05/03/2012 14:00" fim="05/03/2012 19:59" area="computacao" contato="Profa. Ana" repeticoes=0
+
+adicionarEvento id=EV-08 nome="Defesa de Doutorado" inicio="06/03/2012 10:00" fim="06/03/2012 11:59" area="quimica" contato="Prof. Carlos"
+
+adicionarEvento id=EV-09 nome="Defesa de Mestrado" inicio="06/03/2012 15:30" fim="06/03/2012 18:59" area="fisica" contato="Prof. Hyggo" repeticoes=0
+
+adicionarEvento id=EV-10 nome="Disciplina Arquitetura de Computadores II" inicio="04/03/2012 16:00" fim="04/03/2012 17:59" area="computacao" contato="Prof. Hyggo" repeticoes=11
+
+adicionarEvento id=EV-11 nome="Disciplina Arquitetura de Computadores III" inicio="08/03/2012 16:00" fim="08/03/2012 17:59" area="computacao" contato="Prof. Jose" repeticoes=11
+
+adicionarEvento id=EV-12 nome="Disciplina Arquitetura de Computadores III" inicio="09/03/2012 16:00" fim="09/03/2012 17:59" area="computacao" contato="Prof. Evandro" repeticoes=11
+
+
+
+######### Alocar Eventos ##########
+
+alocarEvento idEvento="EV-01" idSala="SA-01"
+alocarEvento idEvento="EV-05" idSala="SA-02"
+
+alocarEvento idEvento="EV-07" idSala="SC-01"
+alocarEvento idEvento="EV-08" idSala="LAB-01"
+alocarEvento idEvento="EV-09" idSala="LAB-03"
+
+
+######### Localizar Eventos Alocados ##########
+
+
+expect "SA-01:EV-01" localizarEvento atributo="nome" valor="Disciplina Sistema de Informacao I"
+expect "SA-01:EV-01, SA-02:EV-05" localizarEvento atributo="nome" valor="Disciplina"
+
+expect "SC-01:EV-07" localizarEvento atributo="contato" valor="Ana"
+expect "LAB-03:EV-09, SA-01:EV-01" localizarEvento atributo="contato" valor="Hyggo"
+
+expect "SA-01:EV-01" localizarEvento atributo="horario" valor="03/03/2012 14:00"
+expect "SA-02:EV-05, SC-01:EV-07" localizarEvento atributo="horario" valor="05/03/2012 15:00"
+
+
+expect 11 getAtributoEvento id="EV-01" atributo="repeticoes"
+expect 0 getAtributoEvento id="EV-05" atributo="repeticoes"
+expect 0 getAtributoEvento id="EV-07" atributo="repeticoes"
+
+
+######### Cancelar Eventos ##########
+#
+# O cancelamento de eventos remove o evento da base de dados e desvincula as possíveis alocacões previamente computadas.
+#
+
+
+cancelarEvento idEvento="EV-01"
+expect "Nenhum evento encontrado." localizarEvento atributo="nome" valor="Disciplina Sistema de Informacao I"
+expect "SA-02:EV-05" localizarEvento atributo="nome" valor="Disciplina"
+expect "LAB-03:EV-09" localizarEvento atributo="contato" valor="Hyggo"
+expect "Nenhum evento encontrado." localizarEvento atributo="horario" valor="03/03/2012 14:00"
+
+cancelarEvento idEvento="EV-05"
+expect "Nenhum evento encontrado." localizarEvento atributo="nome" valor="Disciplina"
+
+cancelarEvento idEvento="EV-07"
+expect "Nenhum evento encontrado." localizarEvento atributo="contato" valor="Ana"
+
+
+expectError "Evento nao existe." getAtributoEvento id="EV-01" atributo="repeticoes"
+expectError "Evento nao existe." getAtributoEvento id="EV-05" atributo="repeticoes"
+expectError "Evento nao existe." getAtributoEvento id="EV-07" atributo="repeticoes"
+
+expect 0 getAtributoEvento id="EV-08" atributo="repeticoes"
+cancelarEvento idEvento="EV-08"
+expectError "Evento nao existe." getAtributoEvento id="EV-08" atributo="repeticoes"
+
+expectError "Evento nao existe." cancelarEvento idEvento="EV-99"
+
+
+
