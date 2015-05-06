@@ -71,8 +71,8 @@ adicionarEvento id=EV-13 nome="Disciplina Arquitetura de Computadores V" inicio=
 ######### Alocar Eventos ##########
 
 alocarEvento idEvento="EV-01" idSala="SA-01"
-alocarEvento idEvento="EV-02" idSala="SA-01"
-alocarEvento idEvento="EV-03" idSala="SA-01"
+alocarEvento idEvento="EV-11" idSala="SA-01"
+alocarEvento idEvento="EV-12" idSala="SA-01"
 alocarEvento idEvento="EV-04" idSala="SA-01"
 
 alocarEvento idEvento="EV-05" idSala="SA-02"
@@ -102,8 +102,8 @@ expectError "Sala/Evento nao existe." alocarEvento idEvento="EV-99" idSala=""
 expectError "O Evento ja foi alocado anteriormente." alocarEvento idEvento="EV-05" idSala="SA-03"
 expectError "O Evento ja foi alocado anteriormente." alocarEvento idEvento="EV-05" idSala="SA-02"
 
-expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-11" idSala="SA-01"
-expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-12" idSala="SA-01"
+expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-02" idSala="SA-01"
+expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-03" idSala="SA-01"
 
 # Sala ocupada pela repetiçao do EV-01
 expectError "A sala nao esta disponivel neste horario." alocarEvento idEvento="EV-13" idSala="SA-01"

@@ -22,7 +22,7 @@ Possiveis duvidas
 
 <b>Linha 98:</b> O método localizarEvento vai buscar todos os eventos alocados, sendo assim, quando for inserido "Disciplina" deverá ser retornado todos os eventos que apresentem "Disciplina" no seu nome[Formato: SA-01:EV-01, SA-02:EV-05].
 
-<b>Linha 100 e 101:</b> Ao buscar um contanto pelo "localizarEvento", deve ser retornado todos os eventos que contenham o nome inserido. (Exemplo: Prof Pedro e Pedro Silva contém Pedro) [Formato:LAB-03:EV-09, SA-01:EV-01]
+<b>Linha 100 e 101:</b> Ao buscar um contato pelo "localizarEvento", deve ser retornado todos os eventos que contenham o nome inserido. (Exemplo: Prof Pedro e Pedro Silva contém Pedro) [Formato:LAB-03:EV-09, SA-01:EV-01]
 * <b>Script 5</b>
 
 * <b>Script 6</b>
@@ -48,6 +48,12 @@ Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: adm
 
 <b>Alterações:</b>
 <i>Linha 33</i>
+
+Alocação alterada (Alocações em finais de semana)  
+
+<b>Alterações:</b>
+<i>Linha 74</i>, <i>Linha 75</i>, <i>Linha 105</i>, <i>Linha 106</i>
+
 
 * <b>Script 4</b>
 
