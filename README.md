@@ -9,14 +9,27 @@ Testes de Aceitação EasyAccept: https://sites.google.com/site/mperkusich/disci
 
 Correções nos Scripts 
 ===============
-* Script 1
+* <b>Script 1</b>
 
-** Escritório - Foi adicionado um novo atributo (Tipo). Esse tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
+Escritório - Foi adicionado um novo atributo (Tipo). Esse tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
 <b>Alterações</b>
 
-<b><i>Linha 40/b></i>
+<b><i>Linha 40</b></i>
 
 <b><i>Linha 42</b></i>
 
 <b><i>Linha 44</b></i>
+
+* <b>Script 1</b>
+
+Escritório - Foi adicionado um novo atributo (Tipo). Esse tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
+<b>Alterações</b>
+
+<b><i>Linha 40</b></i>
+
+<b><i>Linha 42</b></i>
+
+<b><i>Linha 44</b></i>
+
+
 
