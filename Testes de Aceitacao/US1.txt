@@ -37,15 +37,15 @@ adicionarSala id=LAB-06 capacidade=25 finalidade="Laboratorio" tipo="computacao"
 
 # Escritorios
 
-adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" tipo="computacao" apelido="Sala do Prof. Hyggo"
 
-adicionarSala id=ESC-02 capacidade=5 finalidade="Escritorio" apelido="Coordenacao"
+adicionarSala id=ESC-02 capacidade=5 finalidade="Escritorio" tipo="computacao" apelido="Coordenacao"
 
-adicionarSala id=ESC-03 capacidade=3 finalidade="Escritorio" apelido="Laboratorio de Visao Computacional"
+adicionarSala id=ESC-03 capacidade=3 finalidade="Escritorio" tipo="computacao" apelido="Laboratorio de Visao Computacional"
 
 
 
-# Salas de Conferência
+# Salas de ConferÃªncia
 
 adicionarSala id=SC-01 capacidade=30 finalidade="Sala de Conferencia" tipo="Normal"
 
@@ -97,7 +97,7 @@ expectError "Tipo invalido." adicionarSala id=SC-10 capacidade=20 finalidade="Sa
 
 expectError "Atributo invalido" getAtributoSala id=ESC-01 atributo="tipo"
 
-expectError "Sala não existe." getAtributoSala id=ASDDF atributo="tipo"
+expectError "Sala nÃ£o existe." getAtributoSala id=ASDDF atributo="tipo"
 
 
 
