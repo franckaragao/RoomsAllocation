@@ -18,8 +18,9 @@ Possiveis duvidas
 
 * <b>Script 4</b>
 
-Linha 71: Ele busca um evento alocado com o nome "Disciplina Sistema de Informacao I", o evento existe (), mas não está alocado. (Nesse Script é testado os eventos alocados e não alocados)
-Linha 98: O método localizarEvento vai buscar todos os eventos alocados, sendo assim, quando for inserido "Disciplina" deverá ser retornado todos os eventos que apresentem "Disciplina" no seu nome[Formato: SA-01:EV-01, SA-02:EV-05].
+<b>Linha 71:</b> Ele busca um evento alocado com o nome "Disciplina Sistema de Informacao I", o evento existe (), mas não está alocado. (Nesse Script é testado os eventos alocados e não alocados)
+
+<b>Linha 98:</b> O método localizarEvento vai buscar todos os eventos alocados, sendo assim, quando for inserido "Disciplina" deverá ser retornado todos os eventos que apresentem "Disciplina" no seu nome[Formato: SA-01:EV-01, SA-02:EV-05].
 * <b>Script 5</b>
 
 * <b>Script 6</b>
