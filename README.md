@@ -21,6 +21,8 @@ Possiveis duvidas
 <b>Linha 71:</b> Ele busca um evento alocado com o nome "Disciplina Sistema de Informacao I", o evento existe (), mas não está alocado. (Nesse Script é testado os eventos alocados e não alocados)
 
 <b>Linha 98:</b> O método localizarEvento vai buscar todos os eventos alocados, sendo assim, quando for inserido "Disciplina" deverá ser retornado todos os eventos que apresentem "Disciplina" no seu nome[Formato: SA-01:EV-01, SA-02:EV-05].
+
+<b>Linha 100 e 101:</b>
 * <b>Script 5</b>
 
 * <b>Script 6</b>
@@ -34,7 +36,8 @@ Correções nos Scripts
 Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
 
 <b>Alterações:</b>
-<i>Linha 40</i>, <i>Linha 42</i>, <i>Linha 44</i>
+<i>Linha 40</i>, <i>Linha 42</i>, <i>Linha 44</i>, <i>Linha 98</i>
+
 
 * <b>Script 2</b>
 

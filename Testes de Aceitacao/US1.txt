@@ -95,7 +95,7 @@ expectError "Tipo invalido." adicionarSala id=LAB-10 capacidade=25 finalidade="L
 
 expectError "Tipo invalido." adicionarSala id=SC-10 capacidade=20 finalidade="Sala de Conferencia" tipo=
 
-expectError "Atributo invalido" getAtributoSala id=ESC-01 atributo="tipo"
+#expectError "Atributo invalido" getAtributoSala id=ESC-01 atributo="tipo"
 
 expectError "Sala não existe." getAtributoSala id=ASDDF atributo="tipo"
 
