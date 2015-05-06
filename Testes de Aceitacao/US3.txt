@@ -30,7 +30,7 @@ adicionarSala id=LAB-05 capacidade=25 finalidade="Laboratorio" tipo="biologia" a
 
 # Escritorios
 
-adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" tipo="computacao" apelido="Sala do Prof. Hyggo"
 
 # Salas de Conferencia
 
@@ -105,7 +105,7 @@ expectError "O Evento ja foi alocado anteriormente." alocarEvento idEvento="EV-0
 expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-11" idSala="SA-01"
 expectError "As salas nao sao alocadas nos fins de semana." alocarEvento idEvento="EV-12" idSala="SA-01"
 
-# Sala ocupada pela repetiçao do EV-01
+# Sala ocupada pela repetiÃ§ao do EV-01
 expectError "A sala nao esta disponivel neste horario." alocarEvento idEvento="EV-13" idSala="SA-01"
 
 

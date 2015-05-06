@@ -30,7 +30,7 @@ adicionarSala id=LAB-05 capacidade=25 finalidade="Laboratorio" tipo="biologia" a
 
 # Escritorios
 
-adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" tipo="computacao" apelido="Sala do Prof. Hyggo"
 
 # Salas de Conferencia
 

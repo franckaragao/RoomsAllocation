@@ -30,7 +30,7 @@ adicionarSala id=LAB-05 capacidade=25 finalidade="Laboratorio" tipo="biologia" a
 
 # Escritorios
 
-adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" apelido="Sala do Prof. Hyggo"
+adicionarSala id=ESC-01 capacidade=3 finalidade="Escritorio" tipo="computacao" apelido="Sala do Prof. Hyggo"
 
 # Salas de Conferencia
 
@@ -91,7 +91,7 @@ expect 25 getAtributoSala id="LAB-05" atributo="capacidade"
 
 ######### Remover Salas ##########
 #
-# O comando "removerSala" remove a sala da base de dados, desvincula as possiveis alocacões de eventos previamente computadas, 
+# O comando "removerSala" remove a sala da base de dados, desvincula as possiveis alocacï¿½es de eventos previamente computadas, 
 # mas nao exclui os eventos da base de dados.
 #
 
