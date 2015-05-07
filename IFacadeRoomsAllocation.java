@@ -7,9 +7,9 @@ public interface IFacadeRoomsAllocation {
 	public void zerarSistema();
 
 	/**
-	 * Adiciona uma sala ao sistema. O usu·rio pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade fÌsica. Cada sala possui uma
-	 * identificaÁ„o ˙nica: abreviaÁ„o do prÈdio seguido de um n˙mero (Exemplo:
+	 * Adiciona uma sala ao sistema. O usu√°rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade f√≠sica. Cada sala possui uma
+	 * identifica√ß√£o √∫nica: abrevia√ß√£o do pr√©dio seguido de um n√∫mero (Exemplo:
 	 * CN-216).
 	 *
 	 * @param id
@@ -28,10 +28,10 @@ public interface IFacadeRoomsAllocation {
 
 	/**
 	 * 
-	 * Adiciona uma sala ao sistema. O usu·rio pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade fÌsica. Cada sala possui uma
-	 * identificaÁ„o ˙nica: abreviaÁ„o do prÈdio seguido de um n˙mero (Exemplo:
-	 * CN-216). Algumas salas possuem apelidos (Exemplo: AuditÛrio M·rio
+	 * Adiciona uma sala ao sistema. O usu√°rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade f√≠sica. Cada sala possui uma
+	 * identifica√ß√£o √∫nica: abrevia√ß√£o do pr√©dio seguido de um n√∫mero (Exemplo:
+	 * CN-216). Algumas salas possuem apelidos (Exemplo: Audit√≥rio M√°rio
 	 * Toyotaro).
 	 * 
 	 * @param id
@@ -50,10 +50,10 @@ public interface IFacadeRoomsAllocation {
 			String tipo, String apelido) throws RoomsAllocationException;
 
 	/**
-	 * Adiciona uma sala ao sistema. O usu·rio pode adicionar diferentes tipos
-	 * de salas. Cada sala tem uma capacidade fÌsica. Cada sala possui uma
-	 * identificaÁ„o ˙nica: abreviaÁ„o do prÈdio seguido de um n˙mero (Exemplo:
-	 * CN-216). Algumas salas possuem apelidos (Exemplo: AuditÛrio M·rio
+	 * Adiciona uma sala ao sistema. O usu√°rio pode adicionar diferentes tipos
+	 * de salas. Cada sala tem uma capacidade f√≠sica. Cada sala possui uma
+	 * identifica√ß√£o √∫nica: abrevia√ß√£o do pr√©dio seguido de um n√∫mero (Exemplo:
+	 * CN-216). Algumas salas possuem apelidos (Exemplo: Audit√≥rio M√°rio
 	 * Toyotaro).
 	 *
 	 * @param id
@@ -90,8 +90,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usu·rio pode adicionar eventos ao sistema. Cada evento possui um nome,
-	 * datas de inicio e fim, um nome para contato e um numero de repetiÁoes
+	 * O usu√°rio pode adicionar eventos ao sistema. Cada evento possui um nome,
+	 * datas de inicio e fim, um nome para contato e um numero de repeti√ßoes
 	 * semanais
 	 * 
 	 * @param id
@@ -115,7 +115,7 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usu·rio pode adicionar eventos ao sistema. Cada evento possui um nome,
+	 * O usu√°rio pode adicionar eventos ao sistema. Cada evento possui um nome,
 	 * datas de inicio e fim e um nome para contato.
 	 * 
 	 * @param id
@@ -153,8 +153,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * Deve-se alocar uma sala para um evento (repetitivo ou n„o). O sistema
-	 * deve informar as salas disponÌveis que satisfaÁam as restriÁıes do
+	 * Deve-se alocar uma sala para um evento (repetitivo ou n√£o). O sistema
+	 * deve informar as salas dispon√≠veis que satisfa√ßam as restri√ß√µes do
 	 * evento.
 	 * 
 	 * @param idEvento
@@ -167,15 +167,19 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usu·rio pode localizar um evento escalonado atravÈs do nome, contato,
-	 * data etc.
+	 * O usu√°rio pode localizar um evento escalonado atrav√©s do nome, contato,
+	 * data etc. 
+	 * Ao utilizar o contato como atributo de busca, deve ser retornado todos 
+	 * os eventos que contenham o nome do contato inserido. (Exemplo: Prof Pedro e Pedro
+	 * Silva cont√©m Pedro) [Formato:LAB-03:EV-09, SA-01:EV-01]
 	 * 
 	 * @param atributo
 	 *            Nome do atributo do evento (nome, contato, horario etc).
 	 * @param valor
 	 *            Valor do atributo do evento.
 	 * @return O identificador do evento, se algum evento com esse atributo for
-	 *         encontrado.
+	 *         encontrado. Valores m√∫ltiplos s√£o esperados quando mais de um 
+	 * 	   evento for localizado [Formato:LAB-03:EV-09, SA-01:EV-01]
 	 * @throws RoomsAllocationException
 	 */
 	public String localizarEvento(String atributo, String valor)
@@ -193,8 +197,8 @@ public interface IFacadeRoomsAllocation {
 			throws RoomsAllocationException;
 
 	/**
-	 * O usu·rio pode cancelar um evento. Neste caso, o cancelamento remove o
-	 * evento da base de dados e desvincula as possÌveis alocaÁıes previamente
+	 * O usu√°rio pode cancelar um evento. Neste caso, o cancelamento remove o
+	 * evento da base de dados e desvincula as poss√≠veis aloca√ß√µes previamente
 	 * computadas.
 	 * 
 	 * @param idEvento
@@ -204,8 +208,8 @@ public interface IFacadeRoomsAllocation {
 	public void cancelarEvento(String idEvento) throws RoomsAllocationException;
 
 	/**
-	 * O usu·rio pode remover salas do sistema. A remoÁao de uma sala tambÈm
-	 * remove as possÌveis alocaÁıes que referem a mesma, mas n„o exclui os
+	 * O usu√°rio pode remover salas do sistema. A remo√ßao de uma sala tamb√©m
+	 * remove as poss√≠veis aloca√ß√µes que referem a mesma, mas n√£o exclui os
 	 * respectivos eventos da base de dados.
 	 * 
 	 * @param idSala
