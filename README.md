@@ -54,6 +54,10 @@ Alocação alterada (Alocações em finais de semana)
 <b>Alterações:</b>
 <i>Linha 74</i>, <i>Linha 75</i>, <i>Linha 105</i>, <i>Linha 106</i>
 
+Adicionado novo evento para testar choque entre datas (verificando repetições)
+ 
+<b>Alterações:</b>
+<i>Linha 70</i>, <i>Linha 109</i>, <i>Linha 110</i>
 
 * <b>Script 4</b>
 
