@@ -64,6 +64,8 @@ Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: adm
 
 Ordem Errada - LAB-03:EV-09, SA-01:EV-01 para SA-01:EV-01, LAB-03:EV-09
 
+<b>Alterações:</b>
+<i>Linha 101</i>
 
 * <b>Script 5</b>
 
