@@ -78,7 +78,7 @@ expect "SA-01:EV-01" localizarEvento atributo="nome" valor="Disciplina Sistema d
 expect "SA-01:EV-01, SA-02:EV-05" localizarEvento atributo="nome" valor="Disciplina"
 
 expect "SC-01:EV-07" localizarEvento atributo="contato" valor="Ana"
-expect "LAB-03:EV-09, SA-01:EV-01" localizarEvento atributo="contato" valor="Hyggo"
+expect "SA-01:EV-01, LAB-03:EV-09" localizarEvento atributo="contato" valor="Hyggo"
 
 expect "SA-01:EV-01" localizarEvento atributo="horario" valor="03/03/2012 14:00"
 expect "SA-02:EV-05, SC-01:EV-07" localizarEvento atributo="horario" valor="05/03/2012 15:00"

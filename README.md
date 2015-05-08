@@ -78,6 +78,11 @@ Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: adm
 <b>Alterações:</b>
 <i>Linha 33</i>
 
+Ordem Errada - LAB-03:EV-09, SA-01:EV-01 para SA-01:EV-01, LAB-03:EV-09
+
+<b>Alterações:</b>
+<i>Linha 81</i>
+
 * <b>Script 6</b>
 
 Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
@@ -85,9 +90,19 @@ Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: adm
 <b>Alterações:</b>
 <i>Linha 33</i>
 
+Ordem Errada - LAB-03:EV-09, SA-01:EV-01 para SA-01:EV-01, LAB-03:EV-09
+
+<b>Alterações:</b>
+<i>Linha 81</i>
+
 * <b>Script 7</b>
 
 Escritório - Foi adicionado um novo atributo (Tipo). Esses tipos podem ser: administração, quimica, computacao, biologia, fisica, construcao, projeto de pesquisa, entre outros. 
 
 <b>Alterações:</b>
 <i>Linha 33</i>
+
+Ordem Errada - LAB-03:EV-09, SA-01:EV-01 para SA-01:EV-01, LAB-03:EV-09
+
+<b>Alterações:</b>
+<i>Linha 81</i>
