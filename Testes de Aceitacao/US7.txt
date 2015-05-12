@@ -109,13 +109,13 @@ expect 0 getAtributoEvento id="EV-09" atributo="repeticoes"
 
 expect 3 getAtributoSala id="ESC-01" atributo="capacidade"
 removerSala idSala="ESC-01"
-expectError "Sala nao existe." getAtributoSala id="ESC-01" atributo="capacidade"
+expectError "Sala não existe." getAtributoSala id="ESC-01" atributo="capacidade"
 
 
 ######### Entradas invalidas ##########
 
-expectError "Sala nao existe." removerSala idSala="ESC-01"
-expectError "Sala nao existe." removerSala idSala="asdfasdf"
+expectError "Sala não existe." removerSala idSala="ESC-01"
+expectError "Sala não existe." removerSala idSala="asdfasdf"
 
 
 
