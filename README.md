@@ -1,7 +1,7 @@
 RoomsAllocation
 ===============
 
-Projeto da disciplina Padrões de Projeto 2015.1‎
+Projeto da disciplina Padrões de Projeto 2015.2‎
 
 Como rodar o EasyAccept: http://easyaccept.sourceforge.net/tutorial.html                                                        
 Onde baixar o EasyAccept: http://sourceforge.net/projects/easyaccept/files/easyaccept/                                          
